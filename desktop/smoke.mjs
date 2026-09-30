@@ -25,7 +25,7 @@ app=await electron.launch({
  await page.locator('#hero-status').filter({hasText:'代理已停止'}).waitFor();
  await app.evaluate(async({clipboard,ClipboardItem})=>{
    const items=await clipboard.read();
-   globalThis.smokeClipboard=await Promise.all(items.map(async item=>new ClipboardItem(
+   globalThis.smokeClipboard=await Promise.all(items.filter(item=>item.types.length).map(async item=>new ClipboardItem(
      Object.fromEntries(await Promise.all(item.types.map(async type=>[type,await item.getType(type)])))
    )));
  });
