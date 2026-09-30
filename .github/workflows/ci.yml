@@ -1,0 +1,29 @@
+name: Desktop CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run test:desktop
+      - run: npm run test:ui
+      - run: npm run dist:win
+      - run: node desktop/smoke.mjs --packaged
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-installer
+          path: dist/CommandCode-Proxy-Setup-*.exe
+          retention-days: 7

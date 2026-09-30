@@ -1,18 +1,78 @@
 {
   "name": "commandcode-proxy",
-  "version": "1.0.0",
+  "version": "1.0.18",
   "type": "module",
-  "description": "Command Code → OpenAI 兼容代理",
+  "description": "Unofficial Windows desktop companion to MAXeaglet/commandcode-proxy",
   "license": "MIT",
-  "main": "proxy.mjs",
+  "main": "desktop/main/main.mjs",
   "scripts": {
     "start": "node proxy.mjs",
     "dev": "node --watch proxy.mjs",
     "test": "node --test test/*.test.mjs",
     "docker:build": "docker build -t commandcode-proxy:latest .",
-    "docker:build:multi": "docker buildx build --platform linux/amd64,linux/arm64 -t commandcode-proxy:latest ."
+    "docker:build:multi": "docker buildx build --platform linux/amd64,linux/arm64 -t commandcode-proxy:latest .",
+    "desktop": "electron .",
+    "test:desktop": "node --test desktop/test/*.test.mjs",
+    "dist:win": "electron-builder --win nsis --x64",
+    "test:ui": "node desktop/smoke.mjs"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=22.12.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "electron": "44.4.5",
+    "electron-builder": "26.15.3"
+  },
+  "author": "ssincxv",
+  "build": {
+    "appId": "io.commandcode.proxy.desktop",
+    "productName": "CommandCode Proxy",
+    "directories": {
+      "output": "dist",
+      "buildResources": "desktop/assets"
+    },
+    "files": [
+      "desktop/main/**",
+      "desktop/renderer/**",
+      "desktop/preload.cjs",
+      "desktop/assets/**",
+      "package.json",
+      "LICENSE",
+      "NOTICE.md"
+    ],
+    "extraResources": [
+      {
+        "to": "proxy/proxy.mjs",
+        "from": "proxy.mjs"
+      },
+      {
+        "to": "proxy/LICENSE",
+        "from": "LICENSE"
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "desktop/assets/icon.ico",
+      "signExecutable": false
+    },
+    "nsis": {
+      "perMachine": false,
+      "oneClick": false,
+      "deleteAppDataOnUninstall": true,
+      "createDesktopShortcut": true,
+      "artifactName": "CommandCode-Proxy-Setup-${version}.exe",
+      "allowToChangeInstallationDirectory": true,
+      "include": "desktop/installer.nsh"
+    }
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ssincxv/commandcode-proxy-desktop.git"
+  },
+  "homepage": "https://github.com/ssincxv/commandcode-proxy-desktop#readme",
+  "bugs": {
+    "url": "https://github.com/ssincxv/commandcode-proxy-desktop/issues"
   }
 }

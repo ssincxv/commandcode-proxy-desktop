@@ -207,7 +207,7 @@ async function checkProtocolDrift() {
     if (!res.ok) throw new Error(`npm responded with ${res.status}`);
     const pkg = await res.json();
     const latest = typeof pkg?.version === 'string' ? pkg.version : null;
-    if (latest && latest !== CC_PROTOCOL_VERSION) {
+    if (latest && latest !== CC_PROTOCOL_VERSION && process.env.CC_SUPPRESS_VERSION_DRIFT_WARNING !== '1') {
       log('warn', 'CC CLI version drift: protocol may have changed, re-align from the npm package', {
         implemented: CC_PROTOCOL_VERSION, latest,
       });

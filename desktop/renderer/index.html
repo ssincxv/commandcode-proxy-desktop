@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'">
+<title>CommandCode Proxy</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<aside class="sidebar">
+ <div class="brand"><span class="app-icon generated-icon icon-brand" aria-hidden="true"></span><div>CommandCode<small>PROXY DESKTOP</small></div></div>
+ <div class="nav-label">工作空间</div>
+ <nav aria-label="主要导航">
+ <button data-page="overview" class="selected"><span class="nav-icon generated-icon icon-overview" aria-hidden="true"></span>概览</button>
+ <button data-page="settings"><span class="nav-icon generated-icon icon-settings" aria-hidden="true"></span>代理设置</button>
+ <button data-page="models"><span class="nav-icon generated-icon icon-models" aria-hidden="true"></span>模型目录</button>
+ <button data-page="logs"><span class="nav-icon generated-icon icon-logs" aria-hidden="true"></span>运行日志</button>
+ <button data-page="diagnostics"><span class="nav-icon generated-icon icon-diagnostics" aria-hidden="true"></span>诊断与帮助</button>
+ </nav>
+ <div class="sidebar-bottom"><span id="sidebar-status" class="status-dot"></span><span id="sidebar-state">正在连接</span><small id="version">本地代理 · Windows</small></div>
+</aside>
+<main>
+ <header class="topbar"><span>个人工作空间</span><span class="local-badge">仅本机访问</span></header>
+ <div class="content">
+ <section data-view="overview">
+  <div class="eyebrow">OVERVIEW</div><h1>一切，从连接开始。</h1>
+  <div class="hero"><div class="hero-icon">↗</div><div class="hero-copy"><h2 id="hero-status">代理已停止</h2></div><button id="toggle" class="toggle" role="switch" aria-checked="false" aria-label="启动或停止代理"><span></span></button></div>
+  <h3 class="section-label">连接信息</h3>
+  <div class="group">
+   <div class="row"><div><strong>本地接口</strong><small>OpenAI Chat Completions</small></div><code id="endpoint">127.0.0.1:3050</code><button class="subtle" data-action="copy-url">复制地址</button></div>
+   <div class="row"><div><strong>上游服务</strong><small>CommandCode API</small></div><span id="upstream" class="value">api.commandcode.ai</span></div>
+   <div class="row"><div><strong>默认测试模型</strong><small>用于应用内的连接验证</small></div><span id="current-model" class="value"></span></div>
+  </div>
+  <h3 class="section-label">客户端接入</h3>
+  <div class="integration"><span class="integration-symbol">↗</span><div><h2>连接你的应用与工具</h2><div class="actions"><button class="primary" data-action="test">测试连接</button><button data-action="copy-key">复制 API Key</button></div></div></div>
+
+ </section>
+ <section data-view="settings" hidden><div class="eyebrow">PREFERENCES</div><h1>代理设置</h1>
+ <form id="settings-form">
+ <h3 class="section-label">接口与凭据</h3><div class="group">
+ <label class="row"><span>监听端口</span><input id="port" type="number" min="1024" max="65535" required></label>
+ <label class="row"><span>上游地址</span><input id="apiBase" type="url" required></label>
+ <div class="row"><label for="apiKey">API Key</label><div class="key-field"><input id="apiKey" type="password" autocomplete="off" spellcheck="false"><button id="key-visibility" type="button" aria-label="显示 API Key" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/><path class="eye-slash" d="m3 3 18 18"/></svg></button></div></div>
+ <label class="row"><span>默认测试模型</span><input id="model" required></label>
+ <label class="row"><span>日志级别</span><select id="logLevel"><option>info</option><option>debug</option><option>warn</option><option>error</option></select></label></div>
+ <h3 class="section-label">启动与窗口</h3><div class="group">
+ <label class="row"><div>打开应用时启动代理</div><input type="checkbox" id="autoStart"></label>
+ <label class="row"><div>登录 Windows 后自动启动</div><input type="checkbox" id="launchAtLogin"></label>
+ <label class="row"><div>关闭窗口时保留在托盘</div><input type="checkbox" id="closeToTray"></label></div>
+ <div class="actions"><button type="submit" class="primary">保存设置</button><button type="button" data-action="import">导入原配置</button></div>
+
+ </form></section>
+ <section data-view="models" hidden><div class="eyebrow">MODEL LIBRARY</div><h1>模型目录</h1><div class="actions"><button class="primary" data-action="models">刷新模型</button><button id="speed-test" type="button">速度测试</button><span id="model-selection-count"></span></div><div id="model-list" class="model-grid empty">点击刷新模型</div><div id="model-notice" class="page-notice" role="status" aria-live="polite" hidden></div></section>
+ <section data-view="logs" hidden><div class="eyebrow">ACTIVITY</div><h1>运行日志</h1><div class="actions"><select id="log-filter" aria-label="日志级别"><option value="all">全部</option><option value="error">错误</option><option value="warn">警告</option></select></div><pre id="logs">暂无日志</pre></section>
+ <section data-view="diagnostics" hidden><div class="eyebrow">SUPPORT</div><h1>诊断与帮助</h1><div class="group">
+ <div class="row"><div><strong>本地健康检查</strong><small>检查服务是否响应，不消耗模型额度</small></div><button data-action="health">检查</button></div>
+ <div class="row"><div><strong>连接测试</strong><small>验证代理、上游密钥和模型响应</small></div><button data-action="test">测试</button></div>
+ <div class="row"><div><strong>重启代理</strong><small>仅管理此应用启动的进程</small></div><button data-action="restart">重启</button></div>
+ <div class="row"><strong>配置目录</strong><button data-action="folder">打开目录</button></div>
+ <div class="row"><strong>原项目与文档</strong><button data-action="docs">查看 GitHub</button></div></div></section>
+ <div id="notice" role="status" aria-live="polite" hidden></div>
+ </div>
+</main><script type="module" src="app.mjs"></script></body></html>

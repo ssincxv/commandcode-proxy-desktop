@@ -1,9 +1,13 @@
 node_modules/
 .git/
+dist/
+config.json
+.env*
 *.log
+desktop/qa/
 .commandcode/
 .opencode/
 .omo/
-temp/
-README*.md
+.agents/
+.codex/
 AGENTS.md

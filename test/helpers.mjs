@@ -101,7 +101,7 @@ export async function startProxy({ upstreamPort, env = {}, cwd } = {}) {
   const workdir = cwd ?? mkdtempSync(join(tmpdir(), 'ccp-test-'));
   copyFileSync(join(REPO, 'proxy.mjs'), join(workdir, 'proxy.mjs'));
   if (!existsSync(join(workdir, 'config.json'))) {
-    copyFileSync(join(REPO, 'config.json'), join(workdir, 'config.json'));
+    copyFileSync(join(REPO, 'config.example.json'), join(workdir, 'config.json'));
   }
   const child = spawn(process.execPath, ['proxy.mjs'], {
     cwd: workdir,
