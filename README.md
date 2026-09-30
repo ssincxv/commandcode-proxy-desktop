@@ -49,6 +49,8 @@ OpenCode 的 Base URL 不要追加 `/chat/completions`。客户端要在同一�
 
 ## 开发与构建
 
+换电脑或开启新对话继续开发时，先读 [项目交接与恢复开发](docs/交接/README.md)；模块关系见 [技术架构](docs/交接/技术架构.md)，可复制的上下文见 [新对话开场白](docs/交接/新对话开场白.md)。
+
 要求：Windows x64、Node.js 22.12 或更新版本、npm。
 
 ```sh
