@@ -1,9 +1,11 @@
 import { chineseError } from './errors.mjs';
 import { ModelLibrary } from './model-library.mjs';
 import { KeyField } from './key-field.mjs';
+import { LogFilter } from './log-filter.mjs';
 import { bindNavigation, notify, renderSnapshot } from './view.mjs';
 const api=window.commandcode;
 const keyField=new KeyField(document.getElementById('apiKey'),document.getElementById('key-visibility'),()=>api['reveal-key'](),error=>notify(chineseError(error),true));
+new LogFilter(document.getElementById('log-filter'),document.getElementById('log-filter-menu'));
 let snapshot, busy=false;
 bindNavigation();
 async function refresh() {
