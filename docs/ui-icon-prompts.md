@@ -1,53 +1,91 @@
-# Interface icon generation — 1.0.21
+# UI icon generation prompts
 
-Generated on 2026-09-30 with the built-in image-generation tool. The tool did not expose a verifiable model identifier. Assets live in `desktop/assets/ui-icons/`. Their original alpha channels are preserved; CSS applies the shared blue-violet color, tile background and selection state.
+These seven UI tiles were generated individually using the built-in image tool for version 1.0.22. The overview tile is the shared style reference for the other six assets. The approved application logo is unchanged.
 
-Design references: [Apple design principles](https://developer.apple.com/cn/design/human-interface-guidelines/design-principles) for clarity, familiar metaphors and consistency, and [Discord branding](https://discord.com/branding) for a blue-violet accent direction. These project-generated glyphs are not official symbols from either company.
+Design references: [Apple design principles](https://developer.apple.com/design/human-interface-guidelines/design-principles) and [Discord brand colors](https://discord.com/branding). Original interface symbols; no Apple or Discord logos are reproduced.
 
-## Shared prompt for the five navigation glyphs
+The source PNGs retain their generated color and material. CSS applies the same scale and rounded clipping to every tile for consistent optical spacing at interface sizes.
 
-Use case: logo-brand / UI icon asset. Create one ORIGINAL monochrome interface symbol for a desktop proxy control app, with the clarity and optical balance of Apple interface symbols and the friendly rounded geometry of Discord navigation icons. This is a UI glyph, not an app logo.
-STYLE: precise 2D geometric monoline, perfectly uniform medium-bold stroke (about 8% of the symbol width), soft round caps, rounded corners, simple recognizable silhouette, meticulous optical centering. No perspective, texture, shading, gradients, shadows, bevels, lighting, sketch marks, thin hairlines or outlined double edges. All strokes and fills are SOLID BLACK, #000000, on a genuinely TRANSPARENT alpha background. The black artwork is a mask source: do not render a white background or checkerboard. No colored tile, no enclosing backplate, no border outside the described symbol, no text, letters, numbers, watermarks or logos.
-COMPOSITION: square canvas, symbol occupies exactly 68% of both canvas width and height, with equal 16% transparent margins; preserve that scale for the icon family. Single icon only.
+## overview
 
-### overview.png
+```text
+Use case: UI icon, one asset in a cohesive professional desktop software icon family.
+DESIGN: an original premium rounded-square icon tile combining Discord-like friendly bold geometry and lively periwinkle-blue with the disciplined proportions, clarity and subtle material depth of modern Apple interface artwork. It must feel polished, friendly and purposeful at 28–52 pixels.
+TILE: saturated periwinkle/indigo blue squircle, roughly #6875F5 at the softly lit upper-left transitioning to #4C51D5 at lower-right. Smooth continuous rounded corners, corner radius around 26 percent of tile width. Extremely restrained satin depth: a thin soft upper rim highlight and a subtle darker lower edge, no thick bevel, no inflated plastic, no glass lens distortion, no 3D perspective. Almost front-on flat icon with beautiful subtle depth.
+SYMBOL: one bold solid white/pale-ivory FILLED symbol, using substantial rounded forms and clear negative space, optically centered. Crisp silhouette, smooth edges, no thin outline icon. It occupies 56% of tile width. Gentle very short contact shadow under symbol for a little separation, no long shadows or busy gradients in the symbol. Keep details simple enough to recognize at 24px.
+LAYOUT: square 1024 canvas with genuinely TRANSPARENT background outside the tile. Tile occupies exactly 90% of canvas width and height, centered with equal 5% transparent margins. No letters, words, numbers, watermark, brand logo, labels, extra panels, surrounding interface or mockup. One single tile only. SAME tile color, illumination, material, corner radius, symbol weight and spacing across the set.
+SUBJECT: Overview dashboard. Three solid white rounded rectangular panels arranged into one compact dashboard: one tall panel on the left, two shorter panels stacked on the right. Equal bold panel widths and equal clear blue gutters. No enclosing white frame. The three filled panels form a balanced near-square silhouette.
+```
 
-SUBJECT: Overview dashboard. A rounded square outline containing a vertical divider at one third width (left sidebar), and a horizontal divider halfway down ONLY the right two-thirds (two content panels). Three clean empty panes total. Lines share the same weight. A minimal familiar dashboard symbol.
+## settings
 
-### settings.png
+```text
+Use case: UI icon, one asset in a cohesive professional desktop software icon family.
+DESIGN: an original premium rounded-square icon tile combining Discord-like friendly bold geometry and lively periwinkle-blue with the disciplined proportions, clarity and subtle material depth of modern Apple interface artwork. It must feel polished, friendly and purposeful at 28–52 pixels.
+TILE: saturated periwinkle/indigo blue squircle, roughly #6875F5 at the softly lit upper-left transitioning to #4C51D5 at lower-right. Smooth continuous rounded corners, corner radius around 26 percent of tile width. Extremely restrained satin depth: a thin soft upper rim highlight and a subtle darker lower edge, no thick bevel, no inflated plastic, no glass lens distortion, no 3D perspective. Almost front-on flat icon with beautiful subtle depth.
+SYMBOL: one bold solid white/pale-ivory FILLED symbol, using substantial rounded forms and clear negative space, optically centered. Crisp silhouette, smooth edges, no thin outline icon. It occupies 56% of tile width. Gentle very short contact shadow under symbol for a little separation, no long shadows or busy gradients in the symbol. Keep details simple enough to recognize at 24px.
+LAYOUT: square 1024 canvas with genuinely TRANSPARENT background outside the tile. Tile occupies exactly 90% of canvas width and height, centered with equal 5% transparent margins. No letters, words, numbers, watermark, brand logo, labels, extra panels, surrounding interface or mockup. One single tile only. SAME tile color, illumination, material, corner radius, symbol weight and spacing across the set.
+The attached image is the MASTER STYLE REFERENCE. Keep the exact same blue-violet rounded tile, material, lighting, frontal view, transparent outside area, margins and scale. Replace ONLY the white dashboard motif. Do not alter tile styling.
+SUBJECT: Settings. One substantial ivory-white eight-tooth cogwheel, broad smoothly rounded teeth and a large perfectly circular blue knockout hole in its center. Eight identical balanced teeth, strongly filled silhouette, generous empty center, no inset mini gear, no border circle, no tiny extra details. Cog occupies 57% of tile width, with generous equal padding.
+```
 
-The attached image is a STYLE REFERENCE ONLY: match its stroke weight, roundness, centering and flat mask treatment, but replace its dashboard subject entirely.
+## models
 
-SUBJECT: Settings / adjustments: THREE vertical parallel slider rails with one outlined round knob on each rail, alternating knob heights (left near top, middle near bottom, right near middle). The rails connect tangentially to the knobs without crossing their empty centers. Minimal rounded sliders; no gear.
+```text
+Use case: UI icon, one asset in a cohesive professional desktop software icon family.
+DESIGN: an original premium rounded-square icon tile combining Discord-like friendly bold geometry and lively periwinkle-blue with the disciplined proportions, clarity and subtle material depth of modern Apple interface artwork. It must feel polished, friendly and purposeful at 28–52 pixels.
+TILE: saturated periwinkle/indigo blue squircle, roughly #6875F5 at the softly lit upper-left transitioning to #4C51D5 at lower-right. Smooth continuous rounded corners, corner radius around 26 percent of tile width. Extremely restrained satin depth: a thin soft upper rim highlight and a subtle darker lower edge, no thick bevel, no inflated plastic, no glass lens distortion, no 3D perspective. Almost front-on flat icon with beautiful subtle depth.
+SYMBOL: one bold solid white/pale-ivory FILLED symbol, using substantial rounded forms and clear negative space, optically centered. Crisp silhouette, smooth edges, no thin outline icon. It occupies 56% of tile width. Gentle very short contact shadow under symbol for a little separation, no long shadows or busy gradients in the symbol. Keep details simple enough to recognize at 24px.
+LAYOUT: square 1024 canvas with genuinely TRANSPARENT background outside the tile. Tile occupies exactly 90% of canvas width and height, centered with equal 5% transparent margins. No letters, words, numbers, watermark, brand logo, labels, extra panels, surrounding interface or mockup. One single tile only. SAME tile color, illumination, material, corner radius, symbol weight and spacing across the set.
+The attached image is the MASTER STYLE REFERENCE. Preserve its exact blue-violet tile, illumination, material, framing, corner radius, transparency outside and subtle depth. Change only the white motif.
+SUBJECT: Model library. Three thick, solid ivory-white rounded lozenge/diamond slabs stacked in a simple vertical stack. The upper slab is a filled rounded diamond; the two lower visible slabs are broad filled shallow V-shaped bands. Even blue gaps separate all three layers. Symmetric about the vertical axis, large friendly rounded corners, no fine outline strokes, no tiny marks or extra icons. A minimal, unmistakable stacked layers symbol, balanced near-square silhouette, occupying 57% of the tile width.
+```
 
-### models.png
+## logs
 
-The attached image is a STYLE REFERENCE ONLY: match its stroke weight, roundness, centering and flat mask treatment, but replace its dashboard subject entirely.
+```text
+Use case: UI icon, one asset in a cohesive professional desktop software icon family.
+DESIGN: an original premium rounded-square icon tile combining Discord-like friendly bold geometry and lively periwinkle-blue with the disciplined proportions, clarity and subtle material depth of modern Apple interface artwork. It must feel polished, friendly and purposeful at 28–52 pixels.
+TILE: saturated periwinkle/indigo blue squircle, roughly #6875F5 at the softly lit upper-left transitioning to #4C51D5 at lower-right. Smooth continuous rounded corners, corner radius around 26 percent of tile width. Extremely restrained satin depth: a thin soft upper rim highlight and a subtle darker lower edge, no thick bevel, no inflated plastic, no glass lens distortion, no 3D perspective. Almost front-on flat icon with beautiful subtle depth.
+SYMBOL: one bold solid white/pale-ivory FILLED symbol, using substantial rounded forms and clear negative space, optically centered. Crisp silhouette, smooth edges, no thin outline icon. It occupies 56% of tile width. Gentle very short contact shadow under symbol for a little separation, no long shadows or busy gradients in the symbol. Keep details simple enough to recognize at 24px.
+LAYOUT: square 1024 canvas with genuinely TRANSPARENT background outside the tile. Tile occupies exactly 90% of canvas width and height, centered with equal 5% transparent margins. No letters, words, numbers, watermark, brand logo, labels, extra panels, surrounding interface or mockup. One single tile only. SAME tile color, illumination, material, corner radius, symbol weight and spacing across the set.
+The attached image is the MASTER STYLE REFERENCE. Match the same blue-violet tile precisely: framing, lighting, material, transparency outside, color, corner radius and gentle relief. Change ONLY the white subject.
+SUBJECT: Runtime logs. A single broad solid ivory-white document with gently rounded corners, a small softly folded upper-right corner, and THREE indigo-blue horizontal cutout slots indicating log entries. Rounded ends on slots, first two equal length, last one shorter. The document is vertically oriented but broad enough for small-icon legibility, centered; its maximum dimension is 58% of tile width. No text, letters, bullet points, outlines or tiny decorations. Strong filled document silhouette with simple clear cutouts.
+```
 
-SUBJECT: Model library: THREE evenly spaced stacked rounded diamond-shaped layers seen as simple 2D layer pictograms, matching perspective-free standard interface stacked-layer symbols. Top is one closed rounded diamond outline, the next two are open shallow downward V contours below. Only three layers; clean negative space; no tiny facets.
+## diagnostics
 
-### logs.png
+```text
+Use case: UI icon, one asset in a cohesive professional desktop software icon family.
+DESIGN: an original premium rounded-square icon tile combining Discord-like friendly bold geometry and lively periwinkle-blue with the disciplined proportions, clarity and subtle material depth of modern Apple interface artwork. It must feel polished, friendly and purposeful at 28–52 pixels.
+TILE: saturated periwinkle/indigo blue squircle, roughly #6875F5 at the softly lit upper-left transitioning to #4C51D5 at lower-right. Smooth continuous rounded corners, corner radius around 26 percent of tile width. Extremely restrained satin depth: a thin soft upper rim highlight and a subtle darker lower edge, no thick bevel, no inflated plastic, no glass lens distortion, no 3D perspective. Almost front-on flat icon with beautiful subtle depth.
+SYMBOL: one bold solid white/pale-ivory FILLED symbol, using substantial rounded forms and clear negative space, optically centered. Crisp silhouette, smooth edges, no thin outline icon. It occupies 56% of tile width. Gentle very short contact shadow under symbol for a little separation, no long shadows or busy gradients in the symbol. Keep details simple enough to recognize at 24px.
+LAYOUT: square 1024 canvas with genuinely TRANSPARENT background outside the tile. Tile occupies exactly 90% of canvas width and height, centered with equal 5% transparent margins. No letters, words, numbers, watermark, brand logo, labels, extra panels, surrounding interface or mockup. One single tile only. SAME tile color, illumination, material, corner radius, symbol weight and spacing across the set.
+The attached image is the MASTER STYLE REFERENCE. Preserve its exact blue-violet squircle, lighting, material, centered framing, transparent outside and subtle depth. Replace only the white motif.
+SUBJECT: Diagnostics and help. One substantial ivory-white rounded monitor panel, almost square, with a single indigo-blue ECG/pulse waveform cut through its center horizontally. The panel is a bold filled rounded rectangle with broad corners. The pulse cutout is a thick readable baseline with one clean up-down spike; no tiny extra oscillations. No stand, no legs, no outer border, no extra controls, no text. Panel occupies about 58% of tile width and 48% of tile height. Friendly solid silhouette and large clean blue pulse cutout.
+```
 
-The attached image is a STYLE REFERENCE ONLY: match its stroke weight, roundness, centering and flat mask treatment, but replace its dashboard subject entirely.
+## proxy
 
-SUBJECT: Runtime logs: one rounded rectangle sheet outline with THREE short horizontal parallel lines inside, evenly spaced; the lowest line slightly shorter. No folded page corner, no text characters. Bold simple log list.
+```text
+Use case: UI icon, one asset in a cohesive professional desktop software icon family.
+DESIGN: an original premium rounded-square icon tile combining Discord-like friendly bold geometry and lively periwinkle-blue with the disciplined proportions, clarity and subtle material depth of modern Apple interface artwork. It must feel polished, friendly and purposeful at 28–52 pixels.
+TILE: saturated periwinkle/indigo blue squircle, roughly #6875F5 at the softly lit upper-left transitioning to #4C51D5 at lower-right. Smooth continuous rounded corners, corner radius around 26 percent of tile width. Extremely restrained satin depth: a thin soft upper rim highlight and a subtle darker lower edge, no thick bevel, no inflated plastic, no glass lens distortion, no 3D perspective. Almost front-on flat icon with beautiful subtle depth.
+SYMBOL: one bold solid white/pale-ivory FILLED symbol, using substantial rounded forms and clear negative space, optically centered. Crisp silhouette, smooth edges, no thin outline icon. It occupies 56% of tile width. Gentle very short contact shadow under symbol for a little separation, no long shadows or busy gradients in the symbol. Keep details simple enough to recognize at 24px.
+LAYOUT: square 1024 canvas with genuinely TRANSPARENT background outside the tile. Tile occupies exactly 90% of canvas width and height, centered with equal 5% transparent margins. No letters, words, numbers, watermark, brand logo, labels, extra panels, surrounding interface or mockup. One single tile only. SAME tile color, illumination, material, corner radius, symbol weight and spacing across the set.
+The attached image is the MASTER STYLE REFERENCE. Preserve its exact blue-violet tile, illumination, color, rounded shape, framing and material. Replace only the white motif.
+SUBJECT: Proxy forwarding. TWO thick solid ivory-white horizontal arrows, one above the other, upper arrow points RIGHT and lower arrow points LEFT. Generously rounded stem ends, broad triangular arrowheads with gently rounded tips. No thin outline or return bends. The arrows are balanced, equal size, separated by a clear blue horizontal gap, forming a bold compact exchange symbol occupying 60% tile width and 44% tile height. No enclosing circle, no extra links, no tiny marks.
+```
 
-### diagnostics.png
+## connection
 
-The attached image is a STYLE REFERENCE ONLY: match its stroke weight, roundness, centering and flat mask treatment, but replace its dashboard subject entirely.
+```text
+Use case: UI icon, one asset in a cohesive professional desktop software icon family.
+DESIGN: an original premium rounded-square icon tile combining Discord-like friendly bold geometry and lively periwinkle-blue with the disciplined proportions, clarity and subtle material depth of modern Apple interface artwork. It must feel polished, friendly and purposeful at 28–52 pixels.
+TILE: saturated periwinkle/indigo blue squircle, roughly #6875F5 at the softly lit upper-left transitioning to #4C51D5 at lower-right. Smooth continuous rounded corners, corner radius around 26 percent of tile width. Extremely restrained satin depth: a thin soft upper rim highlight and a subtle darker lower edge, no thick bevel, no inflated plastic, no glass lens distortion, no 3D perspective. Almost front-on flat icon with beautiful subtle depth.
+SYMBOL: one bold solid white/pale-ivory FILLED symbol, using substantial rounded forms and clear negative space, optically centered. Crisp silhouette, smooth edges, no thin outline icon. It occupies 56% of tile width. Gentle very short contact shadow under symbol for a little separation, no long shadows or busy gradients in the symbol. Keep details simple enough to recognize at 24px.
+LAYOUT: square 1024 canvas with genuinely TRANSPARENT background outside the tile. Tile occupies exactly 90% of canvas width and height, centered with equal 5% transparent margins. No letters, words, numbers, watermark, brand logo, labels, extra panels, surrounding interface or mockup. One single tile only. SAME tile color, illumination, material, corner radius, symbol weight and spacing across the set.
 
-SUBJECT: Diagnostics and help: a clean circular outline containing one simple ECG/pulse line with a single up-down peak, horizontal baseline on either side, generous separation between pulse and circle. Familiar activity health symbol.
-
-For settings, models, logs and diagnostics, `overview.png` was supplied as the style reference.
-
-## Proxy glyph
-
-Create one original interface icon for a desktop proxy app. Match the attached reference's simple flat monoline geometry, medium-bold even strokes, rounded line caps and corners, and generous transparent padding. All artwork pure BLACK on truly transparent alpha background; no tile, white backdrop, text, shadow, bevel, perspective, 3D, texture or glow. Single centered glyph on square canvas, occupying about 68% of the canvas dimensions, leaving 16% transparent padding. Designed to remain clear at 28–52 px. This will be colorized blue-violet with CSS. Match the reference only for style, replace its subject completely.
-SUBJECT: Proxy forwarding. Two parallel horizontal arrows traveling in opposite directions. Upper arrow points RIGHT, lower arrow points LEFT. Each arrow shaft has a short, smooth rounded 90-degree return at the tail, creating a compact balanced bidirectional transfer motif. Simple open arrowheads of equal length; clearly separated paths; consistent medium-bold stroke thickness. No circles, checks, letters or tiny decorative details.
-
-## Connection glyph
-
-Create one original interface icon for a desktop proxy app. Match the attached reference's simple flat monoline geometry, medium-bold even strokes, rounded line caps and corners, and generous transparent padding. All artwork pure BLACK on truly transparent alpha background; no tile, white backdrop, text, shadow, bevel, perspective, 3D, texture or glow. Single centered glyph on square canvas, occupying about 68% of the canvas dimensions, leaving 16% transparent padding. Designed to remain clear at 28–52 px. This will be colorized blue-violet with CSS. Match the reference only for style, replace its subject completely.
-SUBJECT: Connection test. A simple familiar chain-link icon: TWO interlocking oblong rounded chain links oriented on the same rising 45-degree diagonal, one at lower left and one at upper right, overlapping at the center. Spacious transparent inner openings, smooth round ends, balanced mirror symmetry about diagonal, same uniform medium-bold outline weight as reference. No success checkmark, circle badge, arrows or extra decorations.
-
-Both use `overview.png` as the style reference. Individual source images are retained without raster editing.
+The attached image is the MASTER STYLE REFERENCE. Preserve exactly its tile color, lighting, satin material, rounded corners, proportions and ivory symbol finish. Change only the white symbol.
+SUBJECT: connection testing. Two bold interlocking rounded chain links, arranged on a diagonal bottom-left to top-right. Each link is a short pill-shaped loop with a generously thick ivory body and one clear small blue opening. The two links interlock cleanly at the center, unmistakably connected. Friendly rounded geometric forms, optically balanced centered placement, big solid shape mass matching the reference dashboard panels, not a delicate thin outline. No extra dots, checkmarks, sparks or network nodes. One single app icon tile.
+```
