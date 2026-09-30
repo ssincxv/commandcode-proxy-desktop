@@ -1,6 +1,6 @@
 {
   "name": "commandcode-proxy",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "type": "module",
   "description": "Unofficial Windows desktop companion to MAXeaglet/commandcode-proxy",
   "license": "MIT",
