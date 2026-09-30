@@ -1,5 +1,6 @@
 # Artwork
 
-- `icon.svg`, `icon.png`, `icon.ico`: original bidirectional-arrow artwork created for this desktop companion; MIT, copyright 2026 ssincxv.
+- `icon.png`: AI-generated artwork selected by ssincxv on 2026-09-30, developed from the maintainer's sketch and visual references. It uses four open circular lobes, a circular center opening and rounded inward curves on a black background. Generated with the built-in image-generation tool; its specific model identifier was not exposed. Included under the repository MIT license to the extent copyright applies.
+- `icon.ico`: Windows format conversion of `icon.png`, containing 16, 20, 24, 32, 40, 48, 64, 128 and 256 pixel images. The application window, sidebar, tray and installer use this selected artwork.
 - `sidebar-icons-generated.png`: AI-generated interface artwork commissioned for this project; included under the repository MIT license to the extent copyright applies. It is not an official Apple/Discord/CommandCode icon set.
-- No CommandCodeAI official logo/avatar is distributed in this public edition. Product names belong to their respective owners; the code license does not grant trademark rights.
+- This artwork is not an official CommandCodeAI logo or an indication of endorsement. AI generation and this project's MIT license do not establish trademark clearance or grant third-party trademark rights. Product names belong to their respective owners.
