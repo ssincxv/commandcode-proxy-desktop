@@ -50,7 +50,8 @@ input[type=checkbox]{accent-color:#242629}
 .icon-proxy{--ui-icon:url("../assets/ui-icons/proxy.png")}
 .icon-connection{--ui-icon:url("../assets/ui-icons/connection.png")}
 /* Log selectors keep their regular border without an extra focus ring. */
-#log-filter:focus,#log-filter:focus-visible,#logLevel:focus,#logLevel:focus-visible{outline:none;box-shadow:none}
+#log-filter:focus,#log-filter:focus-visible{outline:none}
+#logLevel:focus,#logLevel:focus-visible{outline:none;box-shadow:none}
 
 .model-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .model-grid.empty{display:block;background:#fff;border:1px solid #e4e7ed;border-radius:12px;padding:24px}
@@ -58,7 +59,16 @@ input[type=checkbox]{accent-color:#242629}
 .model-item code{min-width:0;overflow-wrap:anywhere;color:#374052;font-family:inherit;font-size:13px;line-height:1.5}
 .page-notice{margin-top:16px;color:#667387;font-size:12px;overflow-wrap:anywhere}
 .page-notice.error{color:#a85044}
-#log-filter{width:auto;min-width:100px}
+#log-filter{width:auto;min-width:100px;border-color:#d9dadd;border-radius:9px;padding:8px 13px;background:var(--button-surface);color:#303236;box-shadow:var(--button-depth);cursor:pointer;transition:background .15s,box-shadow .15s}
+#log-filter:hover{background:var(--button-surface-hover)}
+/* Keep log scrolling inside the panel; other pages retain document scrolling. */
+main:has([data-view=logs]:not([hidden])){height:100dvh;display:flex;flex-direction:column;min-height:0}
+main:has([data-view=logs]:not([hidden]))>.topbar{flex-shrink:0}
+.content:has([data-view=logs]:not([hidden])){display:flex;flex-direction:column;flex:1;min-height:0;width:100%}
+[data-view=logs]:not([hidden]){display:flex;flex-direction:column;flex:1;min-height:0}
+[data-view=logs]>:not(#logs),.content:has([data-view=logs]:not([hidden]))>#notice{flex-shrink:0}
+[data-view=logs]>.actions{margin-top:0}
+#logs{flex:1;min-height:0;max-height:none;margin:0}
 @media(max-width:760px){.model-grid{grid-template-columns:1fr}}
 
 .model-item{flex-direction:column;align-items:flex-start;justify-content:center;cursor:pointer;user-select:none;touch-action:pan-y}
