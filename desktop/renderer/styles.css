@@ -4,15 +4,15 @@ button,input,select{font:inherit}button{border:1px solid #dce0e7;background:whit
 .sidebar{background:#eceef2;border-right:1px solid #e0e3e9;padding:32px 16px 22px;display:flex;flex-direction:column;position:sticky;top:0;height:100vh}
 .brand{display:flex;align-items:center;gap:12px;margin:0 8px 44px;font-weight:650;letter-spacing:-.35px}.brand small{display:block;font-size:9px;letter-spacing:1.9px;color:#8b919d;font-weight:500;margin-top:6px}
 .app-icon{display:flex;align-items:center;justify-content:center;border-radius:12px;width:40px;height:40px;background:linear-gradient(150deg,#4299ff,#0861e5);color:white;font-size:26px;box-shadow:0 4px 10px #2675d82b}.app-icon span{font-size:17px;margin-left:-4px}
-.nav-label{font-size:11px;color:#8b919d;padding-left:14px;margin-bottom:10px}nav{display:grid;gap:5px}nav button{border:0;background:transparent;text-align:left;padding:10px 13px;display:flex;align-items:center;gap:12px;color:#697282;border-radius:9px}
+nav{display:grid;gap:5px}nav button{border:0;background:transparent;text-align:left;padding:10px 13px;display:flex;align-items:center;gap:12px;color:#697282;border-radius:9px}
 nav button.selected{background:#fff;color:#202733;box-shadow:0 2px 7px #25354f0b}.nav-icon{display:grid;place-items:center;width:24px;height:24px;border-radius:6px;color:white;font-size:18px}.blue{background:#3987f5}.gray{background:#8c96a6}.violet{background:#a075de}.amber{background:#e9a548}.green{background:#60b49b}
 .sidebar-bottom{margin-top:auto;padding:15px 12px 0;border-top:1px solid #dce0e6;color:#75808c;font-size:12px}.sidebar-bottom small{display:block;font-size:10px;margin-top:10px;color:#8f97a3}.status-dot{display:inline-block;background:#9ba5b4;width:7px;height:7px;border-radius:50%;margin-right:6px}.status-dot.online{background:#34b476}
-main{min-width:0}.topbar{height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 42px;border-bottom:1px solid #e9ecf0;color:#949ba6;font-size:11px}.local-badge{background:#eaf1ed;color:#6a8c79;border-radius:5px;padding:4px 8px}
+main{min-width:0}.topbar{height:68px;display:flex;align-items:center;justify-content:flex-end;padding:0 42px;border-bottom:1px solid #e9ecf0;color:#949ba6;font-size:11px}.local-badge{background:#eaf1ed;color:#6a8c79;border-radius:5px;padding:4px 8px}
 .content{max-width:920px;margin:0 auto;padding:36px 48px 32px}.eyebrow{font-size:10px;letter-spacing:2px;color:#9ba2af;margin-bottom:10px}h1{font-size:29px;font-weight:620;letter-spacing:-.8px;margin:0 0 10px}h2{font-size:17px;font-weight:600;margin:0 0 6px}p{margin:0}.intro{color:#949ba8;font-size:13px;margin-bottom:30px}
 .hero{display:flex;align-items:center;gap:18px;background:linear-gradient(120deg,#fff,#f2f7ff);border:1px solid #e0e8f3;border-radius:15px;padding:25px;margin-bottom:30px;box-shadow:0 6px 20px #33456604}.hero-icon{width:52px;height:52px;display:grid;place-items:center;border-radius:15px;background:#e5efff;color:#4287eb;font-size:31px}.hero-copy{flex:1}.hero p{font-size:12px;color:#8692a2}
 .toggle{padding:3px;background:#bdc4ce;width:46px;height:27px;border:0;border-radius:20px;flex-shrink:0}.toggle span{display:block;width:21px;height:21px;background:white;border-radius:50%;box-shadow:0 1px 4px #0002;transition:transform .15s}.toggle[aria-checked=true]{background:#34bd77}.toggle[aria-checked=true] span{transform:translateX(19px)}
 .section-label{font-size:12px;font-weight:500;color:#84909f;margin:25px 4px 10px}.group{background:white;border:1px solid #e4e7ed;border-radius:12px;padding:0 20px}.row{display:flex;align-items:center;gap:15px;justify-content:space-between;min-height:66px;padding:15px 0;border-bottom:1px solid #eef0f4}.row:last-child{border-bottom:0}.row strong{font-weight:500;font-size:13px}.row small{display:block;color:#99a0ab;font-size:11px;margin-top:5px}.value{color:#8b94a3;font-size:12px;overflow-wrap:anywhere;text-align:right}.row code{font-size:12px;color:#768397;margin-left:auto}.subtle{color:#3883e6;font-size:11px;background:#f3f7fc;border-color:transparent;padding:6px 8px}
-.integration{display:flex;gap:20px;border:1px solid #e3e7ed;background:#fff;border-radius:12px;padding:24px}.integration-symbol{background:#f2f5fa;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;width:48px;height:48px;font-size:23px;color:#748aa9}.integration-symbol span{font-size:16px;margin-top:14px;margin-left:-2px}.integration h2{font-size:15px}.integration p{font-size:12px;color:#949ca9;line-height:1.8}.actions{display:flex;align-items:center;gap:10px;margin:18px 0}.integration .actions{margin-bottom:0}.primary{background:#237aee;border-color:#237aee;color:white;box-shadow:0 2px 4px #2278de20}.primary:hover{background:#166ddd}.footnote{font-size:11px;color:#9aa3b0;line-height:1.8;margin:18px 4px}
+.integration{display:flex;align-items:center;gap:20px;border:1px solid #e3e7ed;background:#fff;border-radius:12px;padding:24px}.integration-symbol{border-radius:14px;flex-shrink:0;width:48px;height:48px}.actions{display:flex;align-items:center;gap:10px;margin:18px 0}.integration .actions{margin:0;flex-wrap:wrap}.primary{background:#237aee;border-color:#237aee;color:white;box-shadow:0 2px 4px #2278de20}.primary:hover{background:#166ddd}.footnote{font-size:11px;color:#9aa3b0;line-height:1.8;margin:18px 4px}
 input:not([type=checkbox]),select{border:1px solid #dce2eb;border-radius:6px;background:#fafbfd;padding:8px 10px;color:#4f5c6f;width:min(300px,55%)}input[type=checkbox]{width:18px;height:18px;accent-color:#2580ed}
 #notice{margin-top:22px;padding:14px 18px;border:1px solid #cee1f5;border-radius:9px;background:#edf6ff;color:#3b6389;font-size:13px;overflow-wrap:anywhere}#notice.error{background:#fff1ef;border-color:#f4d1cb;color:#a85044}
 pre{background:#fff;border:1px solid #e4e7ed;border-radius:12px;padding:20px;white-space:pre-wrap;word-break:break-word;font-size:11px;line-height:1.9;max-height:480px;overflow:auto;color:#667387}.empty{padding:25px;color:#97a1ad;font-size:12px}
@@ -29,16 +29,20 @@ pre{background:#fff;border:1px solid #e4e7ed;border-radius:12px;padding:20px;whi
 .key-field #apiKey:focus-visible{outline:none}
 .eye-slash{display:none}
 #key-visibility[aria-pressed=true] .eye-slash{display:block}
-/* Original generated atlas; crop only in presentation, preserving its alpha. */
-.generated-icon{background-image:url("../assets/sidebar-icons-generated.png");background-repeat:no-repeat;background-size:336.8421% 336.8421%;background-color:transparent;box-shadow:none;flex-shrink:0}
-.nav-icon.generated-icon{width:26px;height:26px;border-radius:7px}
-.app-icon.generated-icon{width:40px;height:40px;border-radius:11px}
-.app-icon.icon-brand{background-image:url("../assets/icon.png");background-size:contain;background-position:center;background-repeat:no-repeat}
-.icon-overview{background-position:48.6667% 24.7778%}
-.icon-settings{background-position:93% 24.7778%}
-.icon-models{background-position:4.4444% 72.6667%}
-.icon-logs{background-position:48.6667% 72.6667%}
-.icon-diagnostics{background-position:93% 72.6667%}
+/* Generated alpha masks share their color, tile and sizing in the interface. */
+.app-icon.icon-brand{width:40px;height:40px;border-radius:11px;background:url("../assets/icon.png") center/contain no-repeat;box-shadow:none;flex-shrink:0}
+.ui-icon{position:relative;display:block;flex-shrink:0;background:#eceefa;color:#6670c2;box-shadow:none}
+.ui-icon::before{content:"";position:absolute;inset:0;background:currentColor;mask:var(--ui-icon) center/contain no-repeat;-webkit-mask:var(--ui-icon) center/contain no-repeat}
+.nav-icon.ui-icon{width:28px;height:28px;border-radius:8px;background:#e5e8f3}
+nav button.selected .ui-icon{background:#e7eaff;color:#5865d8}
+.hero-icon.ui-icon,.integration-symbol.ui-icon{background:#e9edff;color:#5865d8}
+.icon-overview{--ui-icon:url("../assets/ui-icons/overview.png")}
+.icon-settings{--ui-icon:url("../assets/ui-icons/settings.png")}
+.icon-models{--ui-icon:url("../assets/ui-icons/models.png")}
+.icon-logs{--ui-icon:url("../assets/ui-icons/logs.png")}
+.icon-diagnostics{--ui-icon:url("../assets/ui-icons/diagnostics.png")}
+.icon-proxy{--ui-icon:url("../assets/ui-icons/proxy.png")}
+.icon-connection{--ui-icon:url("../assets/ui-icons/connection.png")}
 /* Log selectors keep their regular border without an extra focus ring. */
 #log-filter:focus,#log-filter:focus-visible,#logLevel:focus,#logLevel:focus-visible{outline:none;box-shadow:none}
 
