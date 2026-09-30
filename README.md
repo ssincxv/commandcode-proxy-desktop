@@ -3,9 +3,11 @@
 [![CI](https://github.com/ssincxv/commandcode-proxy-desktop/actions/workflows/ci.yml/badge.svg)](https://github.com/ssincxv/commandcode-proxy-desktop/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-基于 [MAXeaglet/commandcode-proxy](https://github.com/MAXeaglet/commandcode-proxy) 的 **Windows x64 非官方桌面补充版**。复用上游代理核心，增加图形界面、托盘和安装程序，方便 OpenCode、沉浸式翻译等客户端使用。
+CommandCode Proxy Desktop 是面向 Windows 的 CommandCode 代理管理应用，集成服务控制、连接配置、模型目录、并发测速与运行诊断，通过图形界面集中管理本地代理服务。
 
-This is an unofficial Windows desktop companion to MAXeaglet's MIT-licensed proxy. It is not affiliated with CommandCodeAI or endorsed by the upstream author. See [attribution](NOTICE.md).
+项目基于 [MAXeaglet/commandcode-proxy](https://github.com/MAXeaglet/commandcode-proxy) 的代理核心构建，提供桌面交互、系统托盘和 Windows 安装程序。项目来源、授权及独立维护说明见 [NOTICE.md](NOTICE.md)。
+
+CommandCode Proxy Desktop is a Windows application for managing a local CommandCode API proxy. Built on [MAXeaglet/commandcode-proxy](https://github.com/MAXeaglet/commandcode-proxy), it brings service controls, connection settings, a model catalog, concurrent speed tests, and runtime diagnostics into a single desktop interface. See [NOTICE.md](NOTICE.md) for project provenance and licensing.
 
 ## 下载与使用
 
